@@ -3,12 +3,29 @@ import { add } from "./math";
 
 it("should summarize all number values in an aray", () => {
   // Arrange
-  const numbers = [1, 2, 3];
+  const numbers = [1, 2];
   const expectedResult = numbers.reduce((acc, el) => acc + el, 0);
 
   // Act
   const result = add(numbers);
 
   // Assert
+  expect(result).toBe(expectedResult);
+});
+
+it("should yield NaN if at least one invalid number is provided", () => {
+  const inputs = ["invalid", 1];
+
+  const result = add(inputs);
+
+  expect(result).toBeNaN();
+});
+
+it("should yield a correct sum if an array of numeric string values is provided", () => {
+  const inputs = ["1", "2"];
+  const expectedResult = inputs.reduce((acc, el) => +acc + +el, 0);
+
+  const result = add(inputs);
+
   expect(result).toBe(expectedResult);
 });
