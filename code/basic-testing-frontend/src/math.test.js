@@ -2,14 +2,11 @@ import { it, expect } from "vitest";
 import { add } from "./math";
 
 it("should summarize all number values in an aray", () => {
-  // Arrange
   const numbers = [1, 2];
   const expectedResult = numbers.reduce((acc, el) => acc + el, 0);
 
-  // Act
   const result = add(numbers);
 
-  // Assert
   expect(result).toBe(expectedResult);
 });
 
@@ -28,4 +25,18 @@ it("should yield a correct sum if an array of numeric string values is provided"
   const result = add(inputs);
 
   expect(result).toBe(expectedResult);
+});
+
+it("should yield 0 as a sum if an empty array is provided", () => {
+  const inputs = [];
+
+  const result = add(inputs);
+
+  expect(result).toBe(0);
+});
+
+it("should throw an error if no value is passed into the function", () => {
+  const result = add();
+
+  expect(result).toThrowError();
 });
