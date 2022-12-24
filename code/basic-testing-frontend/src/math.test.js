@@ -36,7 +36,9 @@ it("should yield 0 as a sum if an empty array is provided", () => {
 });
 
 it("should throw an error if no value is passed into the function", () => {
-  const result = add();
+  const resultFn = () => {
+    add();
+  };
 
-  expect(result).toThrowError();
+  expect(resultFn).toThrow();
 });
