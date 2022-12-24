@@ -19,8 +19,11 @@ it("should return a number value if a string number argument is entered", () => 
 
 it("should yield NaN for non-transformable values", () => {
   const input = "hello";
+  const input2 = {};
 
   const result = transformToNumber(input);
+  const result2 = transformToNumber(input2);
 
   expect(result).toBeNaN();
+  expect(result2).toBeNaN();
 });
