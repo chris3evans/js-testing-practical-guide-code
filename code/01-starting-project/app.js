@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { extractEnteredNumberValues } from './src/parser.js';
 import { calculateResult } from './src/math.js';
 import { generateResultText, outputResult } from './src/output.js';
@@ -15,3 +16,10 @@ function formSubmitHandler(event) {
 }
 
 form.addEventListener('submit', formSubmitHandler);
+=======
+import { generateReportData, storeData } from './src/data.js';
+import log from './src/util/logger.js';
+
+const data = generateReportData(log);
+storeData(data);
+>>>>>>> ef4b179ff2897aaaa56ab18cc47b2ef45497895f
