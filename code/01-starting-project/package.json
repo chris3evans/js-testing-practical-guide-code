@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "basic-testing-frontend",
   "version": "1.0.0",
   "description": "",
@@ -25,15 +26,32 @@
   "type": "module",
   "scripts": {
     "test": "vitest"
+=======
+  "name": "mocks-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server -c-1",
+    "test": "vitest --run"
+>>>>>>> c3622121a8cc2c4d499760155ad30a0e4425b37a
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "jsonwebtoken": "^8.5.1"
   },
   "devDependencies": {
     "vitest": "^0.9.2"
 >>>>>>> ef4b179ff2897aaaa56ab18cc47b2ef45497895f
+=======
+    "http-server": "^14.1.0"
+  },
+  "devDependencies": {
+    "happy-dom": "^2.55.0",
+    "vitest": "^0.9.3"
+>>>>>>> c3622121a8cc2c4d499760155ad30a0e4425b37a
   }
 }
